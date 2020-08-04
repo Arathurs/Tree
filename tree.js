@@ -1,3 +1,18 @@
+const findIndex = function (arr, data) {
+	let index;
+
+	for (var i = 0; i < arr.length; i++) {
+		if (arr[i].data === data) {
+			index = i;
+		}
+	}
+	return index;
+}
+
+const log = function (node) {
+	console.log(node.data);
+}
+
 class Queue {
 	constructor() {
 		this._oldestIndex = 1;
@@ -133,19 +148,4 @@ class Tree {
  
 		return childToRemove;
 	}
-}
- 
-const findIndex = function (arr, data) {
-	let index;
-
-	for (var i = 0; i < arr.length; i++) {
-		if (arr[i].data === data) {
-			index = i;
-		}
-	}
-	return index;
-}
-
-const log = function (node) {
-	console.log(node.data);
 }
